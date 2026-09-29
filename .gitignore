@@ -1,0 +1,6 @@
+.env
+__pycache__/
+storage/*.npz
+storage/*.json
+*.pyc
+.venv/

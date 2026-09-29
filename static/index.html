@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>XYZ Technologies · HR Policy Assistant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/static/styles.css?v=3" />
+</head>
+<body>
+
+<aside class="rail">
+  <div class="rail-top">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none"><path d="M6 6h7l3 5 3-5h7l-6.5 10L26 26h-7l-3-5-3 5H6l6.5-10L6 6Z" fill="currentColor"/></svg>
+      </div>
+      <div class="brand-text">
+        <strong>XYZ Technologies</strong>
+        <span>HR Policy Assistant</span>
+      </div>
+    </div>
+
+    <div class="doc-card" id="docCard">
+      <div class="doc-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"/><path d="M14 3v5h5"/></svg>
+      </div>
+      <div class="doc-meta">
+        <span class="doc-name" id="docName">Loading…</span>
+        <span class="doc-sub" id="docSub">Checking knowledge base</span>
+      </div>
+    </div>
+
+    <nav class="topics">
+      <p class="rail-label">Popular topics</p>
+      <button class="topic" data-q="How many earned leaves do I get in a year and can I carry them forward?">
+        <span class="topic-ico">🌴</span> Leave &amp; carry forward
+      </button>
+      <button class="topic" data-q="What is the notice period for a confirmed employee in band L5?">
+        <span class="topic-ico">📄</span> Notice period
+      </button>
+      <button class="topic" data-q="What does the group medical insurance cover and for which family members?">
+        <span class="topic-ico">🏥</span> Insurance &amp; wellness
+      </button>
+      <button class="topic" data-q="How many days per week do I need to come to the office?">
+        <span class="topic-ico">🏢</span> Hybrid work
+      </button>
+      <button class="topic" data-q="When is salary credited and what is the attendance cut-off date?">
+        <span class="topic-ico">💰</span> Payroll cycle
+      </button>
+      <button class="topic" data-q="How do I claim travel and hotel expenses, and what are the limits?">
+        <span class="topic-ico">✈️</span> Travel &amp; expenses
+      </button>
+      <button class="topic" data-q="How do I raise a grievance and what is the escalation timeline?">
+        <span class="topic-ico">⚖️</span> Grievance redressal
+      </button>
+    </nav>
+  </div>
+
+  <div class="rail-bottom">
+    <label class="upload" id="uploadLabel">
+      <input type="file" id="fileInput" accept="application/pdf" hidden />
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M17 8l-5-5-5 5"/><path d="M12 3v12"/></svg>
+      <span id="uploadText">Replace policy PDF</span>
+    </label>
+    <p class="rail-note">Answers are generated only from the indexed handbook.</p>
+  </div>
+</aside>
+
+<main class="main">
+  <header class="topbar">
+    <div class="topbar-title">
+      <h1>HR Policy Assistant</h1>
+      <p>Employee Handbook &amp; HR Policy v3.0 · Effective 1 April 2026</p>
+    </div>
+    <div class="status" id="statusPill"><i></i><span>Connecting</span></div>
+  </header>
+
+  <section class="stream" id="stream">
+    <div class="hero" id="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <p class="eyebrow">Grounded in your handbook</p>
+      <h2>Stop reading 12 pages.<br /><em>Just ask.</em></h2>
+      <p class="hero-sub">
+        Every answer is drawn strictly from the XYZ Technologies HR policy document —
+        with the exact section and page cited, so you can verify it in seconds.
+      </p>
+      <div class="chips">
+        <button class="chip" data-q="How many paternity leave days do I get?">How many paternity leave days do I get?</button>
+        <button class="chip" data-q="Can I encash my casual leave?">Can I encash my casual leave?</button>
+        <button class="chip" data-q="When do I become eligible for gratuity?">When am I eligible for gratuity?</button>
+        <button class="chip" data-q="Can I use ChatGPT or other public AI tools for work?">Can I use public AI tools at work?</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="composer-wrap">
+    <form class="composer" id="composer" autocomplete="off">
+      <input id="input" type="text" maxlength="500"
+             placeholder="Ask anything about leave, payroll, benefits, notice period…" />
+      <button id="send" type="submit" aria-label="Send question">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </button>
+    </form>
+    <p class="disclaimer">
+      AI-generated from the source PDF. For personal figures, check the XYZ People Portal (HRMS).
+    </p>
+  </div>
+</main>
+
+<script src="/static/app.js?v=4"></script>
+</body>
+</html>
